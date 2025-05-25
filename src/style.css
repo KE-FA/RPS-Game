@@ -19,7 +19,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   width: auto;
-
+  height: 100vh;
 }
 
 .body {
@@ -44,23 +44,12 @@ html {
 
 @media screen and (max-width: 560px) {
   .header-view {
-    max-height: 283px;
+    max-height: 295px;
   }
 
   .header-top {
     gap: 3rem;
   }
-
-  /* .comp-choice {
-    padding: 2rem 1rem;
-  }
-   .comp-choice-desc {
-    margin-bottom: 10px;
-  }
-  .comp-alt-choices {
-    font-size: 30px;
-    width:50px;
-  }  */
 }
 
 /* .header-social {
@@ -84,15 +73,12 @@ html {
   font-size: 1rem;
 }
 
-/* .choices{
-  justify-content: center;
-} */
 .comp-choice {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem 1rem;
+  padding: 2.2rem 1rem;
 }
 
 .comp-choice-desc {
@@ -121,9 +107,6 @@ html {
   font-family: var(--primary-font);
   text-transform: uppercase;
   font-size: 1.5rem;
-
-
-  
 }
 
 /* End of Middle Section */
@@ -153,13 +136,12 @@ html {
 
 .player {
   background-color: var(--color-primary);
-  height:55%;
-
+  height: 55%;
 }
 
 .player-options {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
@@ -167,8 +149,9 @@ html {
   max-height: 200px;
   margin-top: 5px;
   justify-content: center;
-  margin-left: 70px;
-  max-width: 400px;
+  gap: 1rem;
+  /* margin-left: 70px;
+  max-width: 400px; */
   /* margin-bottom: 0px; */
   /* max-width:350px; */
 }
@@ -176,7 +159,7 @@ html {
 .player-option {
   font-size: 50px;
   background-color: var(--color-white);
-  width: 110px;
+  width: 100px;
   height: 100px;
   /* margin-bottom: 100px; */
   margin-top: 5px;
@@ -185,10 +168,8 @@ html {
   /* border: 2px solid red; */
 }
 
-
-
 .player-option-desc {
-  font-size: 12px;
+  font-size: 10px;
   font-family: var(--primary-font);
   padding: 1rem 1rem;
 }

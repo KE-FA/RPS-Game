@@ -1,56 +1,54 @@
-let compScore = 0
-let playerScore = 0
+let compScore = 0;
+let playerScore = 0;
 
-const rockPlay= document.getElementById('rock-play')
-const paperPlay= document.getElementById('paper-play')
-const scissorsPlay=document.getElementById('scissors-play')
+const rockPlay = document.getElementById("rock-play");
+const paperPlay = document.getElementById("paper-play");
+const scissorsPlay = document.getElementById("scissors-play");
 const computerScorePlay = document.querySelector("#comp-score");
 const playerScorePlay = document.querySelector("#player-score");
 const scoreResult = document.querySelector("#winner");
+const compPlay = document.querySelector("#comp-alt-choice");
+const playerAlt = document.querySelector("#playerAltChoices");
 
-function gamePlay(playerChoice,computerChoice){
+function gamePlay(playerChoice, computerChoice) {
+  compPlay.textContent = computerChoice;
+  playerAlt.textContent = playerChoice;
   if (
     (playerChoice === "✊" && computerChoice === "✊") ||
     (playerChoice === "✌" && computerChoice === "✌") ||
     (playerChoice === "✋" && computerChoice === "✋")
   ) {
-    console.log("this is a tie");
     scoreResult.textContent = "CURRENTLY DRAW";
   } else if (playerChoice === "✊" && computerChoice === "✌") {
-    console.log("player wins wit rock and comp chooses scissors");
     playerScore++;
     playerScorePlay.textContent = playerScore;
     scoreResult.textContent = "PLAYER WINS";
+    compPlay.textContent = "✌";
   } else if (playerChoice === "✌" && computerChoice === "✋") {
-    console.log("player winsssss with scissors on computer is paper");
     playerScore++;
     playerScorePlay.textContent = playerScore;
     scoreResult.textContent = "PLAYER WINS";
   } else if (playerChoice === "✋" && computerChoice === "✊") {
-    console.log("player wins with paper and comp chooses rock");
     playerScore++;
     playerScorePlay.textContent = playerScore;
     scoreResult.textContent = "PLAYER WINS";
   } else {
-    console.log("computer wins");
     compScore++;
     computerScorePlay.textContent = compScore;
     scoreResult.textContent = "COMPUTER WINS";
   }
-
 }
 
-function getComputerChoice(){
-  const choices = ['✊', '✋', '✌️']
-  const randomChoice = Math.floor(Math.random()*choices.length)
-  return choices[randomChoice]
+function getComputerChoice() {
+  const choices = ["✊", "✋", "✌️"];
+  const randomChoice = Math.floor(Math.random() * choices.length);
+  return choices[randomChoice];
 }
 
-
-function handleClick(choice){
-  gamePlay(choice, getComputerChoice())
+function handleClick(choice) {
+  gamePlay(choice, getComputerChoice());
 }
 
-rockPlay.addEventListener('click', ()=>handleClick('✊'))
-paperPlay.addEventListener('click', ()=>handleClick('✋'))
-scissorsPlay.addEventListener('click', ()=>handleClick('✌️'))
+rockPlay.addEventListener("click", () => handleClick("✊"));
+paperPlay.addEventListener("click", () => handleClick("✋"));
+scissorsPlay.addEventListener("click", () => handleClick("✌️"));

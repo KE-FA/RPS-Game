@@ -1,80 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./icon/games.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/main.js" defer></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="src/style.css" />
-  <script src="src/main.js" defer></script>
+    <title>Rock, Paper, Scissors Game</title>
+  </head>
 
-  <title>RPS</title>
-</head>
-
-<body>
-  <!-- Header -->
-  <section>
-    <div class="header-view">
-      <div class="header-top">
-        <div class="header-social">
-          <p class="social-link">
-            &copy; 2025
-            <a href="https://www.linkedin.com/in/kefa-mbithi-508b05256/">Kefa Kameti</a>
-          </p>
+  <body>
+    <!-- Header -->
+    <section>
+      <div class="header-view">
+        <div class="header-top">
+          <div class="header-social">
+            <p class="social-link">
+              &copy; 2025
+              <a href="https://www.linkedin.com/in/kefa-mbithi-508b05256/"
+                >Kefa Kameti</a
+              >
+            </p>
+          </div>
+          <div class="header-desc">
+            <p class="comp-score">computer <span id="comp-score">0</span></p>
+            <p class="player-score">player <span id="player-score">0</span></p>
+          </div>
         </div>
-        <div class="header-desc">
-          <p class="comp-score">computer <span id="comp-score">0</span></p>
-          <p class="player-score">player <span id="player-score">0</span></p>
+        <div class="choices-top">
+          <div class="comp-choice">
+            <p class="comp-choice-desc">Computer</p>
+            <div class="comp-alt-choices" id="comp-alt-choice">✌️</div>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- End of Header Section -->
+
+    <!-- Middle Section -->
+    <section>
+      <div class="Outcome">
+        <p id="winner">Currently draw</p>
+      </div>
+    </section>
+    <!-- End of Middle Section -->
+
+    <!-- Footer -->
+    <div class="player">
       <div class="choices">
-        <div class="comp-choice">
-          <p class="comp-choice-desc">Computer</p>
-          <div class="comp-alt-choices">✌️</div>
+        <div class="player-choice">
+          <p class="player-choice-desc">Player</p>
+          <div class="player-alt-choices" id="playerAltChoices">✌️</div>
+        </div>
+        <div class="player-options">
+          <button class="player-option" type="button" id="rock-play">
+            ✊<br />
+            <p class="player-option-desc">Rock</p>
+          </button>
+          <button class="player-option" type="button" id="paper-play">
+            ✋<br />
+            <p class="player-option-desc">Paper</p>
+          </button>
+
+          <button class="player-option" type="button" id="scissors-play">
+            ✌️<br />
+            <p class="player-option-desc">Scissors</p>
+          </button>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- End of Header Section -->
-
-  <!-- Middle Section -->
-  <section>
-    <div class="Outcome">
-      <p id="winner">Currently draw</p>
-    </div>
-  </section>
-  <!-- End of Middle Section -->
-
-  <!-- Footer -->
-  <div class="player">
-    <div class="choices">
-      <div class="player-choice">
-        <p class="player-choice-desc">Player</p>
-        <div class="player-alt-choices">✊</div>
-      </div>
-      <div class="player-options">
-        <button class="player-option" type="button" id="rock-play">✊<br>
-          <p class="player-option-desc">Rock</p>
-        </button>
-        <button class="player-option" type="button" id="paper-play">✋<br>
-          <p class="player-option-desc">Paper</p>
-        </button>
-
-        <button class="player-option" type="button" id="scissors-play">✌️<br>
-          <p class="player-option-desc">Scissors</p>
-        </button>
-
-      </div>
-
-    </div>
-  </div>
 
     <!-- End of Footer -->
-
-</body>
-
+  </body>
 </html>
