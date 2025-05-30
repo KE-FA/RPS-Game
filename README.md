@@ -2,7 +2,7 @@
 
 A simple and responsive Rock-Paper-Scissors game built using HTML, CSS and JavaScript.
 
-![game user interafce](./Images/RPS.PNG)
+![Game Interface](./Images/RPS.PNG)
 
 
 ## 🛠️ Key Features
